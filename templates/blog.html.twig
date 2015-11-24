@@ -1,0 +1,16 @@
+{% embed 'partials/base.html.twig' %}
+
+    {% set collection = page.collection() %}
+
+	{% block content %}
+        {% for post in collection %}
+            {% include 'partials/post.html.twig' with {'post':post, 'truncate':true} %}
+        {% endfor %}
+
+        {{ dump(config.plugins) }}
+
+        {% if config.plugins.pagination.enabled and collection.params.pagination and collection.params.pagination|length > 1 %}
+            {% include 'partials/pagination.html.twig' with {'pagination':collection.params.pagination} %}
+        {% endif %}
+	{% endblock %}
+{% endembed %}

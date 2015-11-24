@@ -1,0 +1,16 @@
+<div class="post">
+    <h1>{{ post.title }}</h1>
+    <div class="post-body">{{ post.content }}</div>
+    <div class="post-footer row text-uppercase">
+        <div class="col-md-4 text-left">
+            {% for tag in post.taxonomy.tag %}
+                <a href="{{ blog.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+            {% endfor %}
+        </div>
+        <div class="col-md-4 text-center"></div>
+        <div class="col-md-4 text-right">
+            <span class="pull-right">{{ page.date|date("d M Y") }}</span>
+        </div>
+    </div>
+    <hr>
+</div>

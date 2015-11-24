@@ -1,0 +1,46 @@
+@media (min-width: 768px) { .container { max-width: 750px; } }
+
+body {
+    padding-top: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #555555;
+}
+
+.gravatar {
+    height: 100px;
+    width: 100px;
+}
+
+.header {
+    margin-bottom: 100px;
+}
+
+pre {
+    background-color: #f8f8f8;
+}
+
+h1 {
+    font-family: 'Arvo', serif;
+}
+
+.post {
+    margin-bottom: 100px;
+}
+
+.post img {
+    max-width: 720px;
+}
+
+.post .post-footer {
+    font-size: 11px;
+}
+
+.post-body {
+
+}
+
+.post h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

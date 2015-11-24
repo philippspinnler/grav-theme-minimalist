@@ -1,0 +1,16 @@
+name: Minimalist
+version: 1.0.0
+description: "A minimalistic blog theme for grav"
+icon: empire
+author:
+  name: Philipp Spinnler
+  email: philipp@spinnler.ch
+  url: http://philippspinnler.com
+homepage: https://github.com/philippspinnler/grav-theme-minimalist
+keywords: minimalist, clean, simple, blog, core, modern, fast, responsive, html5, css3
+bugs: https://github.com/philippspinnler/grav-theme-minimalist/issues
+license: MIT
+
+form:
+  validation: loose
+  fields:

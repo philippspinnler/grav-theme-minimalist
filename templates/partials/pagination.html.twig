@@ -1,0 +1,24 @@
+<ul class="pagination">
+    {% if pagination.hasPrev %}
+        <li><a rel="prev" href="{{ blog.url|rtrim('/') }}/blog{{ pagination.prevUrl }}">&laquo;</a></li>
+    {% else %}
+        <li><span>&laquo;</span></li>
+    {% endif %}
+
+    {% for paginate in pagination %}
+
+        {% if paginate.isCurrent %}
+            <li><span>{{ paginate.number }}</span></li>
+        {% elseif paginate.isInDelta %}
+            <li><a href="{{ blog.url|rtrim('/') }}/blog{{ paginate.url }}">{{ paginate.number }}</a></li>
+        {% elseif paginate.isDeltaBorder %}
+            <li class="gap"><span>&hellip;</span></li>
+        {% endif %}
+
+    {% endfor %}
+    {% if pagination.hasNext %}
+        <li><a rel="next" href="{{ blog.url|rtrim('/') }}/blog{{ pagination.nextUrl }}">&raquo;</a></li>
+    {% else %}
+        <li><span>&raquo;</span></li>
+    {% endif %}
+</ul>

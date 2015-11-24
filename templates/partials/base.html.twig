@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>{{ site.title }}</title>
+
+	<!-- Bootstrap -->
+    {% block stylesheets %}
+    {% do assets.addCSS('http://fonts.googleapis.com/css?family=Open+Sans', 200) %}
+    {% do assets.addCSS('http://fonts.googleapis.com/css?family=Arvo:700', 200) %}
+    {% do assets.addCss('theme://css/bootstrap.min.css', 200) %}
+    {% do assets.addCss('theme://css/minimalist.css', 200) %}
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+    {% do assets.addCss('theme://js/html5shiv.min.js', 200) %}
+    {% do assets.addCss('theme://js/respond.min.js', 200) %}
+	<![endif]-->
+    {{ assets.Css() }}
+    {% endblock %}
+    {% endblock %}
+</head>
+<body>
+<div class="container">
+    <div class="header row">
+        <div class="col-md-8 col-sm-12">
+            <h4 class="text-uppercase">{{ site.title }} — <small class="text-lowercase">{{ site.metadata.description }}</small></h4>
+            <ul class="list-inline">
+                {% for page in pages.children %}
+                    {% if page.visible %}
+                        <li><a href="{{ page.url }}">{{ page.menu }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-md-4 col-sm-12 text-right">
+            <img class="img-circle gravatar" src="http://www.gravatar.com/avatar/b9021bf7c34bf2b87a67c49e046be04c?s=200">
+        </div>
+    </div>
+
+    {% block content %}{% endblock %}
+
+
+    {% block javascript %}
+        {% do assets.add('theme://js/jquery-1.11.3.min.js') %}
+        {% do assets.add('theme://js/bootstrap.min.js') %}
+        {{ assets.js() }}
+    {% endblock %}
+</div>
+</body>
+</html>
