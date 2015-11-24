@@ -1,5 +1,10 @@
 [__Minimalist__](https://github.com/philippspinnler/grav-theme-minimalist) is a clean and simple blog theme for [Grav CMS](http://getgrav.org).
 
+Based on:
+
+* Twitter bootstrap
+* jQuery
+
 ![Screenshot](screenshot.jpg)
 
 This theme can be used with [Grav skeleton blog site](https://github.com/getgrav/grav-skeleton-blog-site).
