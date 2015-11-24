@@ -2,8 +2,11 @@
 
 Based on:
 
-* Twitter bootstrap
-* jQuery
+* [Twitter Bootstrap](http://getbootstrap.com)
+
+Inspired by:
+
+* [Wordpress Less theme](http://jarederickson.com/less-a-free-super-minimal-wordpress-theme/)
 
 ![Screenshot](screenshot.jpg)
 
